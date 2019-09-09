@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   ImageBackground,
   Alert,
+  FlatList
 } from 'react-native';
 import {
   Container,
@@ -24,8 +25,6 @@ import {
 } from 'native-base';
 import {Col, Row, Grid} from 'react-native-easy-grid';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import Promo from './menuList';
-import {ScrollView} from 'react-native-gesture-handler';
 import Modal from 'react-native-modal';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -34,13 +33,66 @@ import AllMenu from './../components/menu/AllMenu'
 import Drink from './../components/menu/Drink'
 import Food from '../components/menu/Food'
 
+import * as actionOrders from './../redux/actions/orders'
+import {connect} from 'react-redux'
 
-export default class menu extends Component {
+class menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isModalVisible: false,
       date: '',
+      qty: '0',
+      dumy: [
+        {
+          'name': 'Ayam Goreng', 
+          'price':'15000', 
+          'qty':'5',
+          'images': 'ayam.jpg'
+        },
+        {
+          'name': 'Bakso Goreng', 
+          'price':'15000', 
+          'qty':'3',
+          'images': 'ayam.jpg'
+        },
+        {
+          'name': 'Sosis Goreng', 
+          'price':'15000', 
+          'qty':'5',
+          'images': 'ayam.jpg'
+        },
+        {
+          'name': 'Kentang Goreng', 
+          'price':'15000', 
+          'qty':'4',
+          'images': 'ayam.jpg'
+        },
+        {
+          'name': 'Ayam Goreng', 
+          'price':'15000', 
+          'qty':'5',
+          'images': 'ayam.jpg'
+        },
+        {
+          'name': 'Bakso Goreng', 
+          'price':'15000', 
+          'qty':'3',
+          'images': 'ayam.jpg'
+        },
+        {
+          'name': 'Sosis Goreng', 
+          'price':'15000', 
+          'qty':'5',
+          'images': 'ayam.jpg'
+        },
+        {
+          'name': 'Kentang Goreng', 
+          'price':'15000', 
+          'qty':'4',
+          'images': 'ayam.jpg'
+        },
+    ]
     };
   }
 
@@ -65,13 +117,36 @@ export default class menu extends Component {
     );
   }
 
+  removeOrders = (item) =>{
+    let orders = this.props.orders
+    const orderFind = this.props.orders.data.findIndex(order => {
+      return order.menu.id == item.menu.id
+    })
+    
+    // console.log(orders.data[orderFind])
+    if(orders.data[orderFind].qty > 1){
+      orders.data[orderFind].qty -= 1
+      this.props.changeQty(orders.data)
+    }else{
+      orders.data.splice(orderFind, 1)
+      this.props.changeQty(orders.data)
+    }
+  }
+
   paymentCode() {
     this.setState({isModalVisible: false})
     this.props.navigation.navigate('payment');
   }
 
+  componentWillReceiveProps(nextProps){
+    if(nextProps.orders !== this.props.orders){
+      console.log('Data Update')
+      this.setState({orders: nextProps.orders.data})
+      console.log(this.state.orders)
+    }
+  }
+
   render() {
-    console.log(this);
     return (
       <Container>
         <Header style={styles.header} androidStatusBarColor="#2980b9">
@@ -100,7 +175,21 @@ export default class menu extends Component {
         <View style={styles.boxNavigation}>
           <Row>
             <View style={styles.boxCart}>
-    
+              <FlatList
+                data={this.state.orders}
+                horizontal={true}
+                extraData={this.state}
+                renderItem={({item, i}) =>
+                <Col>
+                  <TouchableOpacity key={item.menu.id} onPress={() => this.removeOrders(item)}>
+                      <Card style={{backgroundColor: '#7f8c8d'}}> 
+                        <Image style={styles.cartImage} source={{uri: `${'http://192.168.0.8:3000/static/uploads/' + item.menu.images}`}}/>
+                        <Text style={{textAlign: 'center', color: '#ffffff'}}>{item.qty}</Text>
+                      </Card>
+                  </TouchableOpacity>
+                </Col>
+              }
+              />
             </View>
             <View style={styles.boxButton}>
               <Col>
@@ -199,6 +288,19 @@ export default class menu extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    orders: state.orders,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getOrders: () => dispatch(actionOrders.GET_ORDERS()),
+    changeQty: (data) => dispatch(actionOrders.orderQty(data)) 
+  }
+}
+
 const styles = StyleSheet.create({
   header: {
     backgroundColor: '#3498db',
@@ -284,6 +386,10 @@ const styles = StyleSheet.create({
     width: 65,
     height: 60,
   },
+  cartImage:{
+    width: 80,
+    height: 65
+  },
   modal: {
     width: 320,
     height: 450,
@@ -359,3 +465,8 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
 });
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(menu)

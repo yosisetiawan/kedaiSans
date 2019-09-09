@@ -4,6 +4,7 @@ import {Content, Card, CardItem } from 'native-base'
 import {connect} from 'react-redux';
 import {Row, Col} from 'react-native-easy-grid'
 import * as actionMenus from './../../redux/actions/menus';
+import * as actionOrders from './../../redux/actions/orders';
 import {API_GET_IMAGES} from 'react-native-dotenv'
 
 class AllMenu extends Component {
@@ -14,10 +15,31 @@ class AllMenu extends Component {
   }
 
   componentDidMount(){
-    console.log(this.props.getData())
+    this.props.getData()
+  }
+
+  addOrders = (item) => {
+    const orderFind = this.props.orders.data.findIndex(order => {
+      return order.menu.id == item.id
+    })
+    
+    // let order = this.props.orders
+    // console.log(order.data[orderFind].qty)
+    if(orderFind == -1){
+      const data = {
+        menu: item,
+        qty: 1
+      }
+      this.props.addOrder(data)
+    }else{
+      let order = this.props.orders
+      order.data[orderFind].qty += 1
+      this.props.changeQty(order.data)
+    }
   }
 
   render() {
+    console.log(this.props)
     return (                                                                                                                          
      <Fragment>
         <Content style={styles.contentContainer}>
@@ -26,11 +48,11 @@ class AllMenu extends Component {
             numColumns={2}
             renderItem={({item}) => 
             <Row>
-              <TouchableOpacity key={item.id}>
+              <TouchableOpacity key={item.id} onPress={() => this.addOrders(item)}>
                   <Card style={styles.card}>
                     <Image
                       style={styles.images}
-                      source={{uri: `${API_GET_IMAGES + item.images}`}}
+                      source={{uri: `${'http://192.168.0.8:3000/static/uploads/' + item.images}`}}
                     />
                     <CardItem>
                       <Col>
@@ -53,12 +75,16 @@ class AllMenu extends Component {
 const mapStateToProps = state => {
   return {
     menus: state.menus,
+    orders: state.orders,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     getData: () => dispatch(actionMenus.getMenus()),
+    addOrder: (value) => dispatch(actionOrders.addOrder(value)),
+    getOrders: () => dispatch(actionOrders.getOrders()),
+    changeQty: (data) => dispatch(actionOrders.orderQty(data))
   };
 };
 

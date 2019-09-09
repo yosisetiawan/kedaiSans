@@ -1,1 +1,5 @@
 export const GET_MENUS = 'GET_MENUS'
+export const ADD_ORDER = 'ADD_ORDER'
+export const DELETE_ORDER = 'DELETE_ORDER'
+export const GET_ORDERS = 'GET_ORDERS'
+export const ORDER_QTY = 'ORDER_QTY'
