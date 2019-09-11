@@ -80,6 +80,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_feather.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_feather.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
@@ -110,6 +114,10 @@
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/drawable-xxhdpi/node_modules_reactnavigationstack_lib_module_views_assets_backicon.png"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -190,6 +198,10 @@
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_entypo.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_entypo.json"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -416,6 +428,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-v21/abc_action_bar_item_background_material.xml"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-hdpi_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/drawable-hdpi/node_modules_reactnavigationstack_lib_module_views_assets_backicon.png"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_abc_popup_menu_item_layout.xml.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/layout/abc_popup_menu_item_layout.xml"
     },
@@ -445,7 +461,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_redbox_item_frame.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/layout/redbox_item_frame.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/layout/redbox_item_frame.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -461,7 +477,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_dev_loading_view.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/layout/dev_loading_view.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/layout/dev_loading_view.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
@@ -504,6 +520,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/anim/abc_fade_out.xml"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_ionicons.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_ionicons.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
@@ -533,7 +553,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/anim_catalyst_fade_in.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/anim/catalyst_fade_in.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/anim/catalyst_fade_in.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -561,7 +581,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/anim_catalyst_fade_out.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/anim/catalyst_fade_out.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/anim/catalyst_fade_out.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
@@ -582,6 +602,10 @@
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigationstack_lib_module_views_assets_backicon.png"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/color_abc_hint_foreground_material_light.xml.flat",
@@ -608,6 +632,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_antdesign.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_antdesign.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable_abc_ic_menu_overflow_material.xml.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable/abc_ic_menu_overflow_material.xml"
     },
@@ -616,8 +644,16 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_materialcommunityicons.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_materialcommunityicons.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_zocial.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_zocial.json"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/color_abc_tint_spinner.xml.flat",
@@ -640,6 +676,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable/abc_btn_colored_material.xml"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_evilicons.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_evilicons.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable_abc_btn_borderless_material.xml.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable/abc_btn_borderless_material.xml"
     },
@@ -653,7 +693,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_fps_view.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/layout/fps_view.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/layout/fps_view.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -664,8 +704,12 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/drawable-xxxhdpi/node_modules_reactnavigationstack_lib_module_views_assets_backicon.png"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/anim_catalyst_slide_up.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/anim/catalyst_slide_up.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/anim/catalyst_slide_up.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_icon.xml.flat",
@@ -681,7 +725,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_redbox_item_title.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/layout/redbox_item_title.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/layout/redbox_item_title.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -725,7 +769,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/anim_catalyst_push_up_out.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/anim/catalyst_push_up_out.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/anim/catalyst_push_up_out.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -782,6 +826,10 @@
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/c1c188da1f653f7413487615adc1e803/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_dist_src_basic_icon_nbicons.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_dist_src_basic_icon_nbicons.json"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -893,7 +941,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_redbox_view.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/layout/redbox_view.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/layout/redbox_view.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -916,12 +964,12 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_button_bar_material.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/layout/abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/color_abc_hint_foreground_material_dark.xml.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_button_bar_material.xml.flat",
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -1016,6 +1064,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_foundation.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_foundation.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
@@ -1036,6 +1088,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_app.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/app.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_abc_screen_toolbar.xml.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/layout/abc_screen_toolbar.xml"
     },
@@ -1052,12 +1108,24 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/color/abc_secondary_text_material_light.xml"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_octicons.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_octicons.json"
+    },
+    {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_fontawesome.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_fontawesome.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable_abc_btn_check_material.xml.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable/abc_btn_check_material.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_abc_action_menu_layout.xml.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigationstack_lib_module_views_assets_backiconmask.png.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigationstack_lib_module_views_assets_backiconmask.png"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout_abc_search_dropdown_item_icons_2line.xml.flat",
@@ -1161,7 +1229,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/anim_catalyst_slide_down.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/anim/catalyst_slide_down.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/anim/catalyst_slide_down.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -1288,6 +1356,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/color-v23/abc_tint_default.xml"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/drawable-xhdpi/node_modules_reactnavigationstack_lib_module_views_assets_backicon.png"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
@@ -1317,7 +1389,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable_redbox_top_border_background.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/drawable/redbox_top_border_background.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/drawable/redbox_top_border_background.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
@@ -1380,6 +1452,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/color-v23/abc_tint_switch_track.xml"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_simplelineicons.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_simplelineicons.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/layout-v26_abc_screen_toolbar.xml.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/layout-v26/abc_screen_toolbar.xml"
     },
@@ -1402,6 +1478,10 @@
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_fontawesome5free_meta.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_fontawesome5free_meta.json"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -1532,6 +1612,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_materialicons.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_materialicons.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
@@ -1548,6 +1632,10 @@
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/c1c188da1f653f7413487615adc1e803/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_fontawesome5free.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_fontawesome5free.json"
+    },
+    {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png"
     },
@@ -1557,7 +1645,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/anim_catalyst_push_up_in.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/anim/catalyst_push_up_in.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/anim/catalyst_push_up_in.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -1570,6 +1658,10 @@
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/828f86f0df875279d65720675928dec4/res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_materialicons.json.flat",
+        "source": "/home/yosi/bootcamp/kedaiSans/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_materialicons.json"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -1585,7 +1677,7 @@
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/xml_rn_dev_preferences.xml.flat",
-        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/b18de172844f6750b38fbb1bcdd15211/res/xml/rn_dev_preferences.xml"
+        "source": "/home/yosi/.gradle/caches/transforms-2/files-2.1/504ce9447cb375c521da23a5deecc409/res/xml/rn_dev_preferences.xml"
     },
     {
         "merged": "/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",

@@ -62,7 +62,7 @@ class Food extends Component {
                   <Card style={styles.card}>
                     <Image
                       style={styles.images}
-                      source={{uri: `${'http://192.168.0.16:3000/static/uploads/' + item.images}`}}
+                      source={{uri: `${API_GET_IMAGES + item.images}`}}
                     />
                     <CardItem>
                       <Col>
