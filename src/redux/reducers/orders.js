@@ -22,7 +22,23 @@ export default function orders(state = initialState, action){
         case types.ORDER_QTY:
             return {
                 data: action.payload
+            }
+        case 'POST_ORDER':
+           return {
+               ...state
+           }
+        case 'POST_ORDER_FULFILLED':
+            return {
+                data: []
             }        
+        case 'POST_ORDER_FULFILLED':
+            return {
+                data: []
+            }
+        case 'POST_ORDER_REJECTED':
+            return {
+                data: []
+            }    
             default:
                 return state;
     }

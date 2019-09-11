@@ -6,6 +6,6 @@ export const getMenus = () => ({
   type: types.GET_MENUS,
   payload: axios({
     method: 'GET',
-    url: 'http://192.168.0.8:3000/api/v1/menus',
+    url: 'http://192.168.0.16:3000/api/v1/menus',
   }),
 });

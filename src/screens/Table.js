@@ -19,12 +19,16 @@ export default class Table extends Component {
     };
   }
 
+  componentWillMount(){
+    this.setState({table: ''})
+  }
+
   onPress() {
     const {table} = this.state;
     console.log(this.props);
     var self = this;
     axios
-      .post('http://192.168.0.8:3000/api/v1/transaction', {
+      .post('http://192.168.0.16:3000/api/v1/transaction', {
         tableNumber: table,
       })
       .then(function(response) {
@@ -53,6 +57,7 @@ export default class Table extends Component {
               onChangeText={table => this.setState({table: table})}
               style={styles.input}
               keyboardType={'numeric'}
+              value={this.state.table}
             />
             <TouchableOpacity
               style={styles.buttonSubmit}

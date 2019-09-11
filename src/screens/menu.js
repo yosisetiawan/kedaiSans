@@ -27,13 +27,14 @@ import {Col, Row, Grid} from 'react-native-easy-grid';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import Modal from 'react-native-modal';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
+import axios from 'axios'
 
 import AllMenu from './../components/menu/AllMenu'
 import Drink from './../components/menu/Drink'
 import Food from '../components/menu/Food'
 
 import * as actionOrders from './../redux/actions/orders'
+import * as billActions from '../redux/actions/bills'
 import {connect} from 'react-redux'
 
 class menu extends Component {
@@ -43,57 +44,17 @@ class menu extends Component {
       isModalVisible: false,
       date: '',
       qty: '0',
-      dumy: [
-        {
-          'name': 'Ayam Goreng', 
-          'price':'15000', 
-          'qty':'5',
-          'images': 'ayam.jpg'
-        },
-        {
-          'name': 'Bakso Goreng', 
-          'price':'15000', 
-          'qty':'3',
-          'images': 'ayam.jpg'
-        },
-        {
-          'name': 'Sosis Goreng', 
-          'price':'15000', 
-          'qty':'5',
-          'images': 'ayam.jpg'
-        },
-        {
-          'name': 'Kentang Goreng', 
-          'price':'15000', 
-          'qty':'4',
-          'images': 'ayam.jpg'
-        },
-        {
-          'name': 'Ayam Goreng', 
-          'price':'15000', 
-          'qty':'5',
-          'images': 'ayam.jpg'
-        },
-        {
-          'name': 'Bakso Goreng', 
-          'price':'15000', 
-          'qty':'3',
-          'images': 'ayam.jpg'
-        },
-        {
-          'name': 'Sosis Goreng', 
-          'price':'15000', 
-          'qty':'5',
-          'images': 'ayam.jpg'
-        },
-        {
-          'name': 'Kentang Goreng', 
-          'price':'15000', 
-          'qty':'4',
-          'images': 'ayam.jpg'
-        },
-    ]
+      timer: 0,
+      Subtotal: 0,
+      Service: 0,
+      Tax: 0,
+      Total: 0,
+      Status:0
     };
+  }
+
+  componentDidMount(){
+    setInterval(() => this.setState({timer: this.state.timer + 1}), 1000)
   }
 
   toggleModal = () => {
@@ -111,7 +72,7 @@ class menu extends Component {
           onPress: () => console.log('No Pressed'),
           style: 'cancel',
         },
-        {text: 'YES', onPress: () => console.log('OK Pressed')},
+        {text: 'YES', onPress: () => this.orders(), },
       ],
       {cancelable: false},
     );
@@ -133,9 +94,37 @@ class menu extends Component {
     }
   }
 
-  paymentCode() {
-    this.setState({isModalVisible: false})
-    this.props.navigation.navigate('payment');
+  orders(){
+    const transactionId = this.props.navigation.getParam('id', 0)
+    const subTotal = this.state.orders.reduce((totalPrice, order) => totalPrice + (order.menu.price*order.qty), 0)
+
+    this.setState({Subtotal: this.state.Subtotal + subTotal})
+    this.props.orders.data.map(order => {
+      const orderItem = {
+        menuId: order.menu.id,
+        transactionId: transactionId,
+        qty: order.qty,
+        price: order.menu.price*order.qty,
+        status: 0
+      }
+      this.props.postOrder(orderItem)
+      console.log(this.state.bills)
+    })
+  }
+
+  bill() {
+    const transactionId = this.props.navigation.getParam('id', 0)
+    this.props.getBill(transactionId)
+    this.setState({Service: this.state.Subtotal*0.05})
+    this.setState({Tax: this.state.Subtotal*0.025})
+    this.setState({Total: this.state.Subtotal+this.state.Service+this.state.Tax})
+    setTimeout(() => {
+    axios.put(`${'http://192.168.0.16:3000/api/v1/order/' + transactionId}`, { 'status': 1}), 
+    this.setState({Status: 1}), 
+    console.log(this.state.Status),
+    this.props.getBill(transactionId)
+    }, 10000)
+    this.setState({isModalVisible: true})
   }
 
   componentWillReceiveProps(nextProps){
@@ -144,6 +133,21 @@ class menu extends Component {
       this.setState({orders: nextProps.orders.data})
       console.log(this.state.orders)
     }
+
+    if(nextProps.bills !== this.props.bills){
+      console.log('Bills Update')
+      this.setState({bills: nextProps.bills.data.order})
+    }
+  }
+
+  paymentCode(){
+    const tableNumber = this.props.navigation.getParam('table', 0)
+    this.setState({isModalVisible: false})
+    this.props.navigation.navigate('payment', {table: tableNumber})
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.interval)
   }
 
   render() {
@@ -159,7 +163,7 @@ class menu extends Component {
             <Text style={styles.textTitle}>Kedai Sans</Text>
           </Body>
           <Right style={styles.rightHeader}>
-            <Text style={{color: '#FFFFFF'}}>00:00</Text>
+            <Text style={{color: '#FFFFFF'}}>{this.state.timer}</Text>
           </Right>
         </Header>
         <ScrollableTabView
@@ -183,7 +187,7 @@ class menu extends Component {
                 <Col>
                   <TouchableOpacity key={item.menu.id} onPress={() => this.removeOrders(item)}>
                       <Card style={{backgroundColor: '#7f8c8d'}}> 
-                        <Image style={styles.cartImage} source={{uri: `${'http://192.168.0.8:3000/static/uploads/' + item.menu.images}`}}/>
+                        <Image style={styles.cartImage} source={{uri: `${'http://192.168.0.16:3000/static/uploads/' + item.menu.images}`}}/>
                         <Text style={{textAlign: 'center', color: '#ffffff'}}>{item.qty}</Text>
                       </Card>
                   </TouchableOpacity>
@@ -199,7 +203,7 @@ class menu extends Component {
                   <TouchableOpacity style={styles.buttonCall} onPress={() => alert('Our waiter will come to your table')}>
                     <Text style={styles.textButton}>Call</Text>
                   </TouchableOpacity>
-                  <TouchableOpacity style={styles.buttonBill} onPress={() => this.toggleModal()}>
+                  <TouchableOpacity style={styles.buttonBill} onPress={() => this.bill()}>
                     <Text style={styles.textButton}>Bill</Text>
                   </TouchableOpacity>
               </Col>
@@ -218,42 +222,46 @@ class menu extends Component {
                         <Row style={styles.rowBill}>
                           <Text style={styles.billTextLeft}>Status</Text>
                           <Text style={styles.billTextCenter}>Item</Text>
+                          <Text style={styles.billTextCenter}>Qty</Text>
                           <Text style={styles.billTextRight}>Price</Text>
                         </Row>
-                        <Row style={styles.rowBillList}>
-                          <Text style={styles.billTextLeftItem}>Waitting</Text>
-                          <Text style={styles.billTextCenterItem}>
-                            Ayam Goreng
-                          </Text>
-                          <Text style={styles.billTextRightItem}>15000</Text>
-                        </Row>
+                        <FlatList
+                          data={this.state.bills}
+                          extraData={this.state}
+                          renderItem={({item}) => 
+                          <Row style={styles.rowBillList}>
+                            <Text style={{color: item.status==0 ? 'red' : 'green', textAlign: 'left' , flex: 1}}>{item.status==0 ? 'Waiting' : 'Sent'}</Text>
+                            <Text style={styles.billTextCenterItem}>
+                              {item.menu_id.name}
+                            </Text>
+                            <Text style={styles.billTextCenterItem}>
+                              {item.qty}
+                            </Text>
+                            <Text style={styles.billTextRightItem}>{item.price}</Text>
+                          </Row> 
+                        }
+                        />
                       </View>
                       <View style={styles.billPaymentBox}>
                         <Row style={{marginBottom: 8}}>
                           <Text style={{textAlign: 'left', flex: 1}}>
                             Subtotal
                           </Text>
-                          <Text style={{textAlign: 'right', flex: 1}}>15000</Text>
-                        </Row>
-                        <Row style={{marginBottom: 8}}>
-                          <Text style={{textAlign: 'left', flex: 1}}>
-                            Discount
-                          </Text>
-                          <Text style={{textAlign: 'right', flex: 1}}>15000</Text>
+                          <Text style={{textAlign: 'right', flex: 1}}>{this.state.Subtotal}</Text>
                         </Row>
                         <Row style={{marginBottom: 8}}>
                           <Text style={{textAlign: 'left', flex: 1}}>
                             Service Charge
                           </Text>
-                          <Text style={{textAlign: 'right', flex: 1}}>15000</Text>
+                          <Text style={{textAlign: 'right', flex: 1}}>{this.state.Service}</Text>
                         </Row>
                         <Row style={{marginBottom: 8}}>
                           <Text style={{textAlign: 'left', flex: 1}}>Tax</Text>
-                          <Text style={{textAlign: 'right', flex: 1}}>15000</Text>
+                          <Text style={{textAlign: 'right', flex: 1}}>{this.state.Tax}</Text>
                         </Row>
                         <Row style={{marginBottom: 8}}>
                           <Text style={{textAlign: 'left', flex: 1}}>Total</Text>
-                          <Text style={{textAlign: 'right', flex: 1}}>15000</Text>
+                          <Text style={{textAlign: 'right', flex: 1}}>{this.state.Total}</Text>
                         </Row>
                       </View>
                     </Content>
@@ -291,13 +299,16 @@ class menu extends Component {
 const mapStateToProps = state => {
   return {
     orders: state.orders,
+    bills: state.bills
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     getOrders: () => dispatch(actionOrders.GET_ORDERS()),
-    changeQty: (data) => dispatch(actionOrders.orderQty(data)) 
+    changeQty: (data) => dispatch(actionOrders.orderQty(data)),
+    postOrder: (data) => dispatch(actionOrders.postOrder(data)),
+    getBill: (id) => dispatch(billActions.getBill(id)), 
   }
 }
 

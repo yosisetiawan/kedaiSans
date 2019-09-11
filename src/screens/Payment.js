@@ -19,13 +19,14 @@ export default class Payment extends Component {
     this.props.navigation.navigate('SelectTable');
   }
   render() {
+    console.log(this.props)
     return (
       <View style={styles.container}>
         <View style={styles.boxContainer}>
           <Text style={styles.textInfo}>
             make payments with this code when at cashier
           </Text>
-          <Text style={styles.textCode}>#12</Text>
+          <Text style={styles.textCode}>#{this.props.navigation.getParam('table', 0)}</Text>
           <Text style={styles.textThanks}>Thank you for visiting our shop</Text>
           <TouchableOpacity
             style={styles.buttonSubmit}
