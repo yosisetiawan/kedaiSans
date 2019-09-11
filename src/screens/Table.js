@@ -28,7 +28,7 @@ export default class Table extends Component {
     console.log(this.props);
     var self = this;
     axios
-      .post('http://192.168.0.16:3000/api/v1/transaction', {
+      .post(API_TRANSACTION, {
         tableNumber: table,
       })
       .then(function(response) {
@@ -45,6 +45,7 @@ export default class Table extends Component {
       .catch(function(error) {
         console.log(error);
       });
+      this.setState({table: ''})
   }
   render() {
     return (

@@ -5,6 +5,6 @@ export const getBill = (id) => ({
     type: types.GET_BILL,
     payload: axios({
         method: 'GET',
-        url: `${'http://192.168.0.16:3000/api/v1/order/bill/' + id}`
+        url: `${'https://kedai-sans.herokuapp.com/api/v1/order/bill/' + id}`
     })
 })

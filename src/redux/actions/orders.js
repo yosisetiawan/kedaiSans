@@ -20,5 +20,5 @@ export const orderQty = data => ({
 
 export const postOrder = data => ({
     type : types.POST_ORDER,
-    payload: axios.post('http://192.168.0.16:3000/api/v1/order', data)
+    payload: axios.post('https://kedai-sans.herokuapp.com/api/v1/order', data)
 })
