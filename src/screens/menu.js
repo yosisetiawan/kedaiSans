@@ -36,7 +36,7 @@ import Food from '../components/menu/Food'
 import * as actionOrders from './../redux/actions/orders'
 import * as billActions from '../redux/actions/bills'
 import {connect} from 'react-redux'
-import {API_GET_IMAGES, API_UPDATE_ORDER} from 'react-native-dotenv'
+import {API_GET_IMAGES, API_TRANSACTION, API_UPDATE_ORDER} from 'react-native-dotenv'
 
 class menu extends Component {
   constructor(props) {
@@ -120,7 +120,7 @@ class menu extends Component {
     this.setState({Tax: this.state.Subtotal*0.025})
     this.setState({Total: this.state.Subtotal+this.state.Service+this.state.Tax})
     setTimeout(() => {
-    axios.put(`${'http:/192.168.0.28:8080/api/v1/order/' + transactionId}`, { 'status': 1}), 
+    axios.put(`${'https://kedai-sans.herokuapp.com/api/v1/order/' + transactionId}`, { 'status': 1}), 
     this.setState({Status: 1}), 
     console.log(this.state.Status),
     this.props.getBill(transactionId)
@@ -155,7 +155,7 @@ class menu extends Component {
       isPaid: true
     }
 
-    await axios.put('http://192.168.0.28:8080/api/v1/transaction/' + transactionId, updateData)
+    await axios.put('https://kedai-sans.herokuapp.com/api/v1/transaction/' + transactionId, updateData)
 
     this.setState({isModalVisible: false})
     this.props.navigation.navigate('payment', {table: tableNumber})
@@ -202,7 +202,7 @@ class menu extends Component {
                 <Col>
                   <TouchableOpacity key={item.menu.id} onPress={() => this.removeOrders(item)}>
                       <Card style={{backgroundColor: '#7f8c8d'}}> 
-                        <Image style={styles.cartImage} source={{uri: `${API_GET_IMAGES + item.menu.images}`}}/>
+                        <Image style={styles.cartImage} source={{uri: `${'https://kedai-sans.herokuapp.com/static/uploads/' + item.menu.images}`}}/>
                         <Text style={{textAlign: 'center', color: '#ffffff'}}>{item.qty}</Text>
                       </Card>
                   </TouchableOpacity>

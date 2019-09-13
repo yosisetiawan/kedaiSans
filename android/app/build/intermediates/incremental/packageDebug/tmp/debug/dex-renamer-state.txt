@@ -1,4 +1,4 @@
-#Fri Sep 13 14:35:20 WIB 2019
+#Fri Sep 13 20:09:57 WIB 2019
 base.0=/home/yosi/bootcamp/kedaiSans/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 path.0=classes.dex

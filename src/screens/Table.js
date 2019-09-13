@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   AsyncStorage,
   Image,
+  StatusBar
 } from 'react-native';
 import axios from 'axios';
 import {API_TRANSACTION} from 'react-native-dotenv';
@@ -28,7 +29,7 @@ export default class Table extends Component {
     console.log(this.props);
     var self = this;
     axios
-      .post(API_TRANSACTION, {
+      .post('https://kedai-sans.herokuapp.com/api/v1/transaction', {
         tableNumber: table,
       })
       .then(function(response) {
@@ -50,6 +51,7 @@ export default class Table extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar backgroundColor='#3498db'/>
         <View style={styles.boxContainer}>
           <Text style={styles.brandText}>Kedai Sans</Text>
           <View style={styles.tableContainer}>

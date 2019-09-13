@@ -6,6 +6,7 @@ import {Row, Col} from 'react-native-easy-grid'
 import * as actionMenus from './../../redux/actions/menus';
 import * as actionOrders from './../../redux/actions/orders';
 import {API_GET_IMAGES} from 'react-native-dotenv'
+import {DotIndicator} from 'react-native-indicators'
 
 class AllMenu extends Component {
   constructor(props) {
@@ -39,32 +40,47 @@ class AllMenu extends Component {
   }
 
   render() {
-    console.log(this.props)
+    if(this.props.menus.status !== 1){
+      console.log('Data Kosong')
+    }else{
+      console.log('Data Di Isi')
+    }
     return (                                                                                                                          
      <Fragment>
         <Content style={styles.contentContainer}>
-          <FlatList
-            data={this.props.menus.data}
-            numColumns={2}
-            renderItem={({item}) => 
-            <Row>
-              <TouchableOpacity key={item.id} onPress={() => this.addOrders(item)}>
-                  <Card style={styles.card}>
-                    <Image
-                      style={styles.images}
-                      source={{uri: `${API_GET_IMAGES + item.images}`}}
-                    />
-                    <CardItem>
-                      <Col>
-                        <Text style={styles.menuName}>{item.name}</Text>
-                        <Text>Rp {item.price}</Text>
-                      </Col>
-                    </CardItem>
-                  </Card>
-                </TouchableOpacity>
-            </Row>
-          }
-          />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+          {this.props.menus.status !== 1 && 
+            <View>
+              <DotIndicator color='#3498db' size={9}/>
+              <Text style={{textAlign: 'center', fontWeight: '400'}}>Harap Tunggu Sedang Mengambil Menu</Text>  
+            </View>
+          } 
+
+          {this.props.menus.status === 1 && 
+            <View>
+             <FlatList
+                data={this.props.menus.data}
+                numColumns={2}
+                renderItem={({item}) => 
+                  <Row>
+                  <TouchableOpacity key={item.id} onPress={() => this.addOrders(item)}>
+                      <Card style={styles.card}>
+                        <Image
+                          style={styles.images}
+                          source={{uri: `${'https://kedai-sans.herokuapp.com/static/uploads/' + item.images}`}}
+                        />
+                        <CardItem>
+                          <Col>
+                            <Text style={styles.menuName}>{item.name}</Text>
+                            <Text>Rp {item.price}</Text>
+                          </Col>
+                        </CardItem>
+                      </Card>
+                    </TouchableOpacity>
+                </Row>
+              }
+            />                 
+            </View>
+          }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         </Content>
      </Fragment>
     );

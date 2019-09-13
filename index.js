@@ -4,7 +4,7 @@
 
 import {AppRegistry} from 'react-native';
 import App from './App';
-import Table from './src/screens/Table'
+import Splash from './src/screens/Splash'
 import {name as appName} from './app.json';
 
 console.disableYellowBox = true;

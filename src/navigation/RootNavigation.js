@@ -3,6 +3,7 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 import TableChoose from './../screens/Table';
 import MenuList from './../screens/menu';
 import Payment from '../screens/Payment';
+import Splash from '../screens/Splash'
 
 const MainNavigator = createStackNavigator(
   {
@@ -15,9 +16,12 @@ const MainNavigator = createStackNavigator(
     payment: {
       screen: Payment,
     },
+    splash: {
+      screen: Splash
+    }
   },
   {
-    initialRouteName: 'SelectTable',
+    initialRouteName: 'splash',
     headerMode: 'none',
   },
 );

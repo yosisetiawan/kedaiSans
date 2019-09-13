@@ -12,11 +12,13 @@ export default function menus(state = initialState, action) {
       return {
         ...state,
         isLoading: true,
+        status:0
       };
     case 'GET_MENUS_FULFILLED':
       return {
         ...state,
         isLoading: false,
+        status:1,
         data: action.payload.data,
       };
     case 'GET_MENUS_REJECTED':

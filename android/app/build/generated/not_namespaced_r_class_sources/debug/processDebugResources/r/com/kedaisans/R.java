@@ -3137,8 +3137,9 @@ public final class R {
     public static final int notification_tile_bg=0x7f060060;
     public static final int notify_panel_notification_icon_bg=0x7f060061;
     public static final int redbox_top_border_background=0x7f060062;
-    public static final int tooltip_frame_dark=0x7f060063;
-    public static final int tooltip_frame_light=0x7f060064;
+    public static final int src_assets_images_store=0x7f060063;
+    public static final int tooltip_frame_dark=0x7f060064;
+    public static final int tooltip_frame_light=0x7f060065;
   }
   public static final class id {
     public static final int ALT=0x7f070000;
@@ -3387,7 +3388,8 @@ public final class R {
     public static final int node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_octicons=0x7f0b000d;
     public static final int node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_simplelineicons=0x7f0b000e;
     public static final int node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_zocial=0x7f0b000f;
-    public static final int node_modules_reactnativevectoricons_glyphmaps_materialicons=0x7f0b0010;
+    public static final int node_modules_reactnative_package=0x7f0b0010;
+    public static final int node_modules_reactnativevectoricons_glyphmaps_materialicons=0x7f0b0011;
   }
   public static final class string {
     public static final int abc_action_bar_home_description=0x7f0c0000;

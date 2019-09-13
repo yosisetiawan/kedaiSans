@@ -62,7 +62,7 @@ class Food extends Component {
                   <Card style={styles.card}>
                     <Image
                       style={styles.images}
-                      source={{uri: `${API_GET_IMAGES + item.images}`}}
+                      source={{uri: `${'https://kedai-sans.herokuapp.com/static/uploads/' + item.images}`}}
                     />
                     <CardItem>
                       <Col>
