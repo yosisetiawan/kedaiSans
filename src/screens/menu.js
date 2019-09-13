@@ -36,7 +36,7 @@ import Food from '../components/menu/Food'
 import * as actionOrders from './../redux/actions/orders'
 import * as billActions from '../redux/actions/bills'
 import {connect} from 'react-redux'
-import {API_GET_IMAGES} from 'react-native-dotenv'
+import {API_GET_IMAGES, API_UPDATE_ORDER} from 'react-native-dotenv'
 
 class menu extends Component {
   constructor(props) {
@@ -120,7 +120,7 @@ class menu extends Component {
     this.setState({Tax: this.state.Subtotal*0.025})
     this.setState({Total: this.state.Subtotal+this.state.Service+this.state.Tax})
     setTimeout(() => {
-    axios.put(`${'https://kedai-sans.herokuapp.com/api/v1/order/' + transactionId}`, { 'status': 1}), 
+    axios.put(`${'http:/192.168.0.28:8080/api/v1/order/' + transactionId}`, { 'status': 1}), 
     this.setState({Status: 1}), 
     console.log(this.state.Status),
     this.props.getBill(transactionId)
@@ -141,8 +141,22 @@ class menu extends Component {
     }
   }
 
-  paymentCode(){
+  async paymentCode(){
     const tableNumber = this.props.navigation.getParam('table', 0)
+    const transactionId = this.props.navigation.getParam('id', 0)
+    
+    const updateData = {
+      finishedTime: this.state.timer,
+      subTotal: this.state.Subtotal,
+      serviceCharge: this.state.Service,
+      discount: 0,
+      tax: this.state.Tax,
+      total: this.state.Total,
+      isPaid: true
+    }
+
+    await axios.put('http://192.168.0.28:8080/api/v1/transaction/' + transactionId, updateData)
+
     this.setState({isModalVisible: false})
     this.props.navigation.navigate('payment', {table: tableNumber})
   }

@@ -6,6 +6,6 @@ export const getMenus = () => ({
   type: types.GET_MENUS,
   payload: axios({
     method: 'GET',
-    url: 'https://kedai-sans.herokuapp.com/api/v1/menus',
+    url: API_GET_MENU,
   }),
 });
